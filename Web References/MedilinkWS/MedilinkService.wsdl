@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.LinkSoft.com/MedilinkWS" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.LinkSoft.com/MedilinkWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.LinkSoft.com/MedilinkWS">
+      <s:element name="bIsValidUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="s_UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="s_Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bIsValidUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bIsValidUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_IDDepartmentsOfUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="s_UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_IDDepartmentsOfUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="List_IDDepartmentsOfUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_DepartmentsOfUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="khoaphong" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="s_UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_DepartmentsOfUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="List_DepartmentsOfUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListPatientOfDepartment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="khoaphong" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListPatientOfDepartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListPatientOfDepartmentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseConnection">
+        <s:complexType />
+      </s:element>
+      <s:element name="CloseConnectionResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="bIsValidUserSoapIn">
+    <wsdl:part name="parameters" element="tns:bIsValidUser" />
+  </wsdl:message>
+  <wsdl:message name="bIsValidUserSoapOut">
+    <wsdl:part name="parameters" element="tns:bIsValidUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="List_IDDepartmentsOfUserSoapIn">
+    <wsdl:part name="parameters" element="tns:List_IDDepartmentsOfUser" />
+  </wsdl:message>
+  <wsdl:message name="List_IDDepartmentsOfUserSoapOut">
+    <wsdl:part name="parameters" element="tns:List_IDDepartmentsOfUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="List_DepartmentsOfUserSoapIn">
+    <wsdl:part name="parameters" element="tns:List_DepartmentsOfUser" />
+  </wsdl:message>
+  <wsdl:message name="List_DepartmentsOfUserSoapOut">
+    <wsdl:part name="parameters" element="tns:List_DepartmentsOfUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListPatientOfDepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:ListPatientOfDepartment" />
+  </wsdl:message>
+  <wsdl:message name="ListPatientOfDepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:ListPatientOfDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="CloseConnectionSoapIn">
+    <wsdl:part name="parameters" element="tns:CloseConnection" />
+  </wsdl:message>
+  <wsdl:message name="CloseConnectionSoapOut">
+    <wsdl:part name="parameters" element="tns:CloseConnectionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MedilinkServiceSoap">
+    <wsdl:operation name="bIsValidUser">
+      <wsdl:input message="tns:bIsValidUserSoapIn" />
+      <wsdl:output message="tns:bIsValidUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_IDDepartmentsOfUser">
+      <wsdl:input message="tns:List_IDDepartmentsOfUserSoapIn" />
+      <wsdl:output message="tns:List_IDDepartmentsOfUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_DepartmentsOfUser">
+      <wsdl:input message="tns:List_DepartmentsOfUserSoapIn" />
+      <wsdl:output message="tns:List_DepartmentsOfUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListPatientOfDepartment">
+      <wsdl:input message="tns:ListPatientOfDepartmentSoapIn" />
+      <wsdl:output message="tns:ListPatientOfDepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseConnection">
+      <wsdl:input message="tns:CloseConnectionSoapIn" />
+      <wsdl:output message="tns:CloseConnectionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MedilinkServiceSoap" type="tns:MedilinkServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="bIsValidUser">
+      <soap:operation soapAction="http://www.LinkSoft.com/MedilinkWS/bIsValidUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_IDDepartmentsOfUser">
+      <soap:operation soapAction="http://www.LinkSoft.com/MedilinkWS/List_IDDepartmentsOfUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_DepartmentsOfUser">
+      <soap:operation soapAction="http://www.LinkSoft.com/MedilinkWS/List_DepartmentsOfUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPatientOfDepartment">
+      <soap:operation soapAction="http://www.LinkSoft.com/MedilinkWS/ListPatientOfDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseConnection">
+      <soap:operation soapAction="http://www.LinkSoft.com/MedilinkWS/CloseConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MedilinkServiceSoap12" type="tns:MedilinkServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="bIsValidUser">
+      <soap12:operation soapAction="http://www.LinkSoft.com/MedilinkWS/bIsValidUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_IDDepartmentsOfUser">
+      <soap12:operation soapAction="http://www.LinkSoft.com/MedilinkWS/List_IDDepartmentsOfUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_DepartmentsOfUser">
+      <soap12:operation soapAction="http://www.LinkSoft.com/MedilinkWS/List_DepartmentsOfUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPatientOfDepartment">
+      <soap12:operation soapAction="http://www.LinkSoft.com/MedilinkWS/ListPatientOfDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseConnection">
+      <soap12:operation soapAction="http://www.LinkSoft.com/MedilinkWS/CloseConnection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MedilinkService">
+    <wsdl:port name="MedilinkServiceSoap" binding="tns:MedilinkServiceSoap">
+      <soap:address location="http://192.168.1.168/MedilinkWS/MedilinkService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MedilinkServiceSoap12" binding="tns:MedilinkServiceSoap12">
+      <soap12:address location="http://192.168.1.168/MedilinkWS/MedilinkService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

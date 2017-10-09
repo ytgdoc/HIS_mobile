@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+  <style name="ThemeHis" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+    <item name="android:windowFullscreen">true</item>
+  </style>
+</resources>

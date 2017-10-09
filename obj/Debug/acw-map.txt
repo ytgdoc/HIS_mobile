@@ -1,0 +1,8 @@
+HIS.MainActivity, HIS;md5f3bfd83f7cbc00462d313b301feb0eca.MainActivity
+HIS.MainActivity, HIS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f3bfd83f7cbc00462d313b301feb0eca.MainActivity
+HIS.MainActivity;md5f3bfd83f7cbc00462d313b301feb0eca.MainActivity
+his.MainActivity;md5f3bfd83f7cbc00462d313b301feb0eca.MainActivity
+HIS.MainPage_NoiTru, HIS;md5f3bfd83f7cbc00462d313b301feb0eca.MainPage_NoiTru
+HIS.MainPage_NoiTru, HIS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f3bfd83f7cbc00462d313b301feb0eca.MainPage_NoiTru
+HIS.MainPage_NoiTru;md5f3bfd83f7cbc00462d313b301feb0eca.MainPage_NoiTru
+his.MainPage_NoiTru;md5f3bfd83f7cbc00462d313b301feb0eca.MainPage_NoiTru

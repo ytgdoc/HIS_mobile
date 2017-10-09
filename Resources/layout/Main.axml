@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HIS"
+    android:background="@drawable/backgroundsmartphone">
+    <TableLayout
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tb1"
+        android:background="@drawable/healthcare_his"
+        android:layout_centerHorizontal="true" />
+    <TableLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/duongvienlayout"
+        android:id="@+id/tb2"
+        android:layout_below="@+id/tb1"
+        android:stretchColumns="*">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@color/Title_app"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/tableRow1">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="ĐĂNG NHẬP HIS"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:id="@+id/txtView"
+                android:textColor="@color/Title_content"
+                android:shadowRadius="@android:integer/config_longAnimTime"
+                android:singleLine="true"
+                android:textAlignment="inherit"
+                android:layout_gravity="center" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableRow2"
+            android:gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/duongvienedittextlogin">
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".75"
+                android:padding="15dp"
+                android:hint="Nhập tên đăng nhập"
+                android:id="@+id/editUser"
+                android:singleLine="true"
+                android:textColor="@color/controchuot"
+                android:textCursorDrawable="@null"
+                android:layout_span="1" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:src="@drawable/user" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableRow3"
+            android:gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/duongvienedittextlogin">
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".75"
+                android:padding="15dp"
+                android:hint="Nhập mật khẩu đăng nhập"
+                android:id="@+id/editPass"
+                android:singleLine="true"
+                android:textColor="@color/controchuot"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@null" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:src="@drawable/key" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableRow4"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="1dp"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/lblMSg"
+                android:textColor="#FB003B"
+                android:textAlignment="inherit" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableRow5"
+            android:gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="5dp">
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="7dp"
+                android:text="Đăng nhập"
+                android:textSize="17dp"
+                android:textColor="@color/login_screen"
+                android:background="@drawable/duongvienbuttonlogin"
+                android:id="@+id/btnOk" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tb3"
+        android:layout_below="@+id/tb2"
+        android:background="@drawable/exit"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="3dp" />
+</RelativeLayout>

@@ -1,0 +1,2 @@
+D:\Disk F\LinkSoft\AppLinkSoft\HIS\HIS\obj\Debug\assemblies\HIS.dll
+D:\Disk F\LinkSoft\AppLinkSoft\HIS\HIS\obj\Debug\assemblies\System.Data.DataSetExtensions.dll
